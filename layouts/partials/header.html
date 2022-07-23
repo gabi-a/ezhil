@@ -49,4 +49,10 @@
 	{{- end }}
 	{{- end }}
 	{{- end }}
+
+	{{- if and .IsPage .Params.jsFiles -}}
+	{{- range .Params.jsFiles -}}
+		<script src="{{ . }}"></script>
+	{{- end -}}
+	{{- end -}}
 </head>
